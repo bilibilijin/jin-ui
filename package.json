@@ -2,7 +2,10 @@
   "type": "module",
   "version": "0.0.0",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
   "dependencies": {
     "vue": "^3.4.21"
@@ -15,9 +18,13 @@
     "lint-staged": "^15.2.0",
     "typescript": "^5.2.2",
     "vite": "^5.1.6",
+    "vite-plugin-vitepress-demo": "^2.2.1",
+    "vitepress": "1.0.0-rc.45",
     "vue-tsc": "^1.8.27"
   },
   "lint-staged": {
-    "./**/*.{js,ts,vue,tsx,jsx,css,less,json}": ["eslint --fix"]
+    "./**/*.{js,ts,vue,tsx,jsx,css,less,json}": [
+      "eslint --fix"
+    ]
   }
 }
