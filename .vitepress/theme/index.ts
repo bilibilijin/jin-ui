@@ -4,6 +4,8 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import { AntdTheme } from 'vite-plugin-vitepress-demo/theme'
+import jin from 'jin-ui'
+import 'jin-ui/styles.ts'
 
 export default {
   extends: DefaultTheme,
@@ -15,5 +17,6 @@ export default {
   enhanceApp({ app }) {
     // ...
     app.component('Demo', AntdTheme)
+    app.use(jin)
   },
 } satisfies Theme

@@ -10,8 +10,14 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "paths": {
-      "@tov-ui/utils": [
+      "@jin-ui/utils": [
         "packages/utils/src"
+      ],
+      "jin-ui": [
+        "packages/jin-ui/src"
+      ],
+      "jin-ui/*": [
+        "packages/jin-ui/src/*"
       ]
     },
     "resolveJsonModule": true,
@@ -27,5 +33,8 @@
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.vitepress.json" }
+  ]
 }

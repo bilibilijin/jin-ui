@@ -7,12 +7,14 @@ title: 基础使用
 </docs>
 
 <script setup lang='ts'>
-
+function handleClick() {
+  console.log('click')
+}
 </script>
 
 <template>
   <div>
-    Button的例子
+    <jin-button @click="handleClick" />
   </div>
 </template>
 

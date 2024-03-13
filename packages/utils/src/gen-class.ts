@@ -28,7 +28,7 @@ export function useClassnames(componentName: string) {
             return `${prev}--${arg1}`
         }
         return `${prev}-${cur}`
-      }, componentClass)
+      }, componentClass) as string
     }
     else {
       return componentClass
@@ -37,7 +37,12 @@ export function useClassnames(componentName: string) {
 
   const ce = (e: string) => [e, 'E'] as BEMType
   const cm = (m: string) => [m, 'M'] as BEMType
+
+  // 定义了一个名为'cx'的函数， 接收一个参数'cls', 返回一个对象，key是类名，value是布尔值
+  // 然后将cls函数传递给classNames函数，返回的对象给classNames
   const cx = (cls: () => Record<string, boolean>) => {
+    console.log(cls())
+    // classNames的传递参数是cls返回的对象{string, boolean}, 最后用computed包裹
     return computed(() => classNames(cls()))
   }
 

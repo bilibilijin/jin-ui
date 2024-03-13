@@ -15,7 +15,11 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: /^@tov-ui\/utils/,
+        find: /^jin-ui/,
+        replacement: path.resolve(baseUrl, 'packages/jin-ui/src'),
+      },
+      {
+        find: /^@jin-ui\/utils/,
         replacement: path.resolve(baseUrl, 'packages/utils/src'),
       },
     ],

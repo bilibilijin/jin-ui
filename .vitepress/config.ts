@@ -6,7 +6,7 @@ export default defineConfig({
   description: 'This is a vue component library',
   rewrites: {
     'docs/(.*)': '(.*)',
-    'packages/tov-ui/src/:comp/(.*)': 'components/:comp/(.*)',
+    'packages/jin-ui/src/:comp/(.*)': 'components/:comp/(.*)',
     'packages/utils/src/(.*)': 'utils/(.*)',
   },
   themeConfig: {
