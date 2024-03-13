@@ -18,7 +18,7 @@ hero:
       link: /api-examples
 
 features:
-  - icon: ⚡️
+  - icon: vue3
     title: Vue3
     details: 渐进式JavaScript框架
   - title: TypeScript

@@ -7,6 +7,7 @@ export default defineConfig({
   rewrites: {
     'docs/(.*)': '(.*)',
     'packages/tov-ui/src/:comp/(.*)': 'components/:comp/(.*)',
+    'packages/utils/src/(.*)': 'utils/(.*)',
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -19,8 +20,10 @@ export default defineConfig({
     sidebar: {
       '/components/': [
         {
-          text: '按钮',
-          link: '/components/button/',
+          text: 'Basic基础组件',
+          items: [
+            { text: 'Button按钮', link: '/components/button/' },
+          ],
         },
       ],
       '/introduction/': [
@@ -32,6 +35,13 @@ export default defineConfig({
           ],
         },
       ],
+      '/utils/': [
+        {
+          text: 'genClass',
+          link: '/utils/gen-class',
+        },
+      ],
+
     },
 
     socialLinks: [

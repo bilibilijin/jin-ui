@@ -4,10 +4,16 @@
     "jsx": "preserve",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "useDefineForClassFields": true,
+    "baseUrl": ".",
     "module": "ESNext",
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "paths": {
+      "@tov-ui/utils": [
+        "packages/utils/src"
+      ]
+    },
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
 
@@ -17,6 +23,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noEmit": true,
+    "esModuleInterop": false,
     "isolatedModules": true,
     "skipLibCheck": true
   },
