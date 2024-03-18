@@ -7,15 +7,44 @@ title: 基础使用
 </docs>
 
 <script setup lang='ts'>
-function handleClick() {
-  console.log('click')
-}
 </script>
 
 <template>
-  <div>
-    <jin-button @click="handleClick" />
+  <div style="margin-bottom: 1rem;">
+    <jin-button>
+      Default
+    </jin-button>
+    <jin-button type="primary">
+      Primary
+    </jin-button>
+    <jin-button type="success">
+      Success
+    </jin-button>
+    <jin-button type="warning">
+      Warning
+    </jin-button>
+    <jin-button type="danger">
+      Danger
+    </jin-button>
   </div>
+
+  <!-- <div style="margin-bottom: 1rem;">
+    <jin-button>
+      Default
+    </jin-button>
+    <jin-button type="primary">
+      Primary
+    </jin-button>
+    <jin-button type="success">
+      Success
+    </jin-button>
+    <jin-button type="warning">
+      Warning
+    </jin-button>
+    <jin-button type="danger">
+      Danger
+    </jin-button>
+  </div> -->
 </template>
 
 <style  scoped>
