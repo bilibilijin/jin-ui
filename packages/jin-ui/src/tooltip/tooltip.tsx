@@ -17,10 +17,15 @@ export default defineComponent({
     content: {
       type: String as PropType<string>,
     },
+    trigger: {
+      type: String as PropType<'hover' | 'click'>,
+      default: 'hover',
+    },
   },
   setup(props, { slots }) {
     const reference = ref(null)
     const floating = ref(null)
+    const show = ref(false)
     const placement = computed(() => props.placement)
     const { c } = useClassnames('tooltip')
     const { floatingStyles } = useFloating(reference, floating, {
@@ -28,17 +33,49 @@ export default defineComponent({
       middleware: [offset(5)],
     })
 
+    let timer: ReturnType<typeof setTimeout> | undefined
+
+    const handleMouseEnter = () => {
+      if (props.trigger !== 'hover')
+        return
+      show.value = true
+    }
+    const handleClick = () => {
+      if (props.trigger !== 'click')
+        return
+      show.value = true
+    }
+    const handleMouseLeave = () => {
+      timer = setTimeout(() => {
+        show.value = false
+      }, 150)
+    }
+
     return () => {
       const renderTooltip = () => {
         if (!reference.value)
+          return null
+        if (!show.value)
           return null
 
         const cls = {
           [c()]: true,
         }
 
+        const events = {
+          onMouseenter: () => {
+            if (timer)
+              clearTimeout(timer)
+            timer = undefined
+          },
+          onMouseleave: () => {
+            show.value = false
+          },
+
+        }
+
         return (
-          <div class={cls} ref={floating} style={floatingStyles.value}>
+          <div {...events} class={cls} ref={floating} style={floatingStyles.value}>
             {slots.content ? slots.content?.() : props.content}
           </div>
         )
@@ -58,8 +95,15 @@ export default defineComponent({
         return node
       }
 
+      const events = {
+        onMouseenter: handleMouseEnter,
+        onMouseleave: handleMouseLeave,
+        onClick: handleClick,
+      }
+
       const tipNode = createVNode(node as VNode, {
         ref: reference,
+        ...events,
       })
 
       return (
