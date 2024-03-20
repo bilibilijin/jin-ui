@@ -7,14 +7,19 @@ title: 基础使用
 </docs>
 
 <script setup lang='ts'>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const value = ref('')
+const inputRef = ref()
+
+onMounted(() => {
+  inputRef.value?.focus()
+})
 </script>
 
 <template>
   <div>
-    <jin-input v-model="value" disabled />
+    <jin-input ref="inputRef" v-model="value" style="width: 240px;" placeholder="Please input" />
   </div>
 </template>
 

@@ -15,25 +15,36 @@
         border-color: var(--jin-color-primary);
     }
 
-    &__inner{
-        height: calc(var(--jin-input-height, 32px) - 2px);
-        width: 100%;
-        flex-grow: 1;
-        color: var(--jin-text-color-regular);
-        font-size: inherit;
-        height: var(--jin-input-inner-height);
-        line-height: var(--jin-input-inner-height);
-        padding: 0;
-        outline: none;
-        border: none;
-        background: none;
-        box-sizing: border-box;        
-    }
-
     &--disabled{
         cursor: not-allowed;
         color: var(--jin-color-text-disabled);
         border-color: var(--jin-color-text-disabled);
-        background:#f5f5f5;
+        color: #8D9095;
+        box-shadow: 0 0 0 1px #4C4D4F;
+        background-color: transparent;
+
+        &:focus-within{
+            border-color: #8D9095;
+        }
+    }
+
+    &__prefix{
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+    }
+
+    &__suffix{
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+    }
+
+    &__inner{
+        width: 100%;
+        &:disabled{
+            cursor: not-allowed;
+            background:none;
+        }
     }
 }

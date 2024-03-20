@@ -2,17 +2,26 @@
 <script setup lang='ts'>
 import { nextTick, onMounted, ref } from 'vue'
 import { useClassnames } from '@jin-ui/utils'
-import type { InputProps } from './interface'
+import { omit, pick } from 'lodash-es'
+import { type InputProps, originInputProps } from './interface'
 
 defineOptions({
   name: 'JinInput',
+  inheritAttrs: false,
 })
 
 const props = defineProps<InputProps>()
+
 const emit = defineEmits<{
   'update:modelValue': [string]
 }>()
-const { cx, c, cm } = useClassnames('input')
+
+defineSlots<{
+  prefix(): any
+  suffix(): any
+}>()
+
+const { cx, c, ce, cm } = useClassnames('input')
 const inputRef = ref<HTMLInputElement>()
 
 const cls = cx(() => {
@@ -24,7 +33,7 @@ const cls = cx(() => {
 
 const inputCls = cx(() => {
   return {
-    [c('input')]: true,
+    [c(ce('inner'))]: true,
   }
 })
 
@@ -50,11 +59,30 @@ function handleInput(e: Event) {
 onMounted(() => {
   setInputValue()
 })
+
+function focus() {
+  inputRef.value?.focus()
+}
+
+function blur() {
+  inputRef.value?.blur()
+}
+
+defineExpose({
+  focus,
+  blur,
+})
 </script>
 
 <template>
-  <div :class="cls">
-    <input ref="inputRef" :class="inputCls" :value="modelValue" @input="handleInput">
+  <div :class="cls" v-bind="omit($attrs, originInputProps)">
+    <span v-if="$slots.prefix" :class="c(ce('prefix'))">
+      <slot name="prefix" />
+    </span>
+    <input ref="inputRef" v-bind="pick($attrs, originInputProps)" :disabled="disabled" :class="inputCls" :value="modelValue" @input="handleInput">
+    <span v-if="$slots.suffix" :class="c(ce('suffix'))">
+      <slot name="suffix" />
+    </span>
   </div>
 </template>
 
