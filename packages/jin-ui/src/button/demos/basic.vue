@@ -27,24 +27,6 @@ title: 基础使用
       Danger
     </jin-button>
   </div>
-
-  <!-- <div style="margin-bottom: 1rem;">
-    <jin-button>
-      Default
-    </jin-button>
-    <jin-button type="primary">
-      Primary
-    </jin-button>
-    <jin-button type="success">
-      Success
-    </jin-button>
-    <jin-button type="warning">
-      Warning
-    </jin-button>
-    <jin-button type="danger">
-      Danger
-    </jin-button>
-  </div> -->
 </template>
 
 <style  scoped>

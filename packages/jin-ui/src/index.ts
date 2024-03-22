@@ -10,7 +10,7 @@ export default {
   install(app: App) {
     Object.entries(components).forEach(([_name, comp]) => {
       // 如果该组件有注册的方法，就进行注册
-      if (comp.install)
+      if ((comp as unknown as Plugin).install)
         app.use(comp as any)
     })
   },
