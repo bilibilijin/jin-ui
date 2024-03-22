@@ -4,7 +4,7 @@ import type { BodyProps } from './interface'
 
 export const Body = defineComponent<BodyProps>({
   name: 'Body',
-  setup(props = { columns: [], data: [] }) {
+  setup(props = { columns: [], data: [], stripe: false }) {
     return () => {
       const { c, ce } = useClassnames('table')
       const cellCls = {
@@ -19,8 +19,13 @@ export const Body = defineComponent<BodyProps>({
       }
 
       const rowCls = {
+        [c(ce('row'))]: true,
         [c('body__row')]: true,
+        [c('row__stripe')]: props.stripe,
       }
+
+      console.log(rowCls)
+
       const renderData = () => {
         return data?.map((v) => {
           return (

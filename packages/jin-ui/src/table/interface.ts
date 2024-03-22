@@ -10,9 +10,11 @@ export interface HeaderProps {
 export interface TableProps {
   columns?: ColumnType[]
   data?: any[]
+  stripe?: boolean
 }
 
 export interface BodyProps {
   columns?: ColumnType[]
   data?: any[]
+  stripe?: boolean
 }

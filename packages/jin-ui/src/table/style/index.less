@@ -1,9 +1,66 @@
 @import "../../style/index.less";
 
 .jin-table{
+
+    color: #CFD3D4;
+
+    // &-row{
+    //     &__stripe{
+    //         tr:nth-child(odd){
+    //             background-color: #f0f0f0;
+    //         }
+    //     }
+    // }
+
+
+
     &__cell{
         padding: 16px;
         border-bottom: 1px solid #f0f0f0;
+    }
+
+    &-header{
+        box-sizing: border-box;
+
+        &__cell{
+            position: relative;
+            background-color: transparent;
+            &:not(:last-child){
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    height: 1.5em;
+                    width: 1px;
+                    background: #f0f0f0;
+                }
+            }
+
+
+        }
+    }
+    &-body{
+        &__row{
+            &:hover{
+                cursor: pointer;
+                background-color: rgba(163,166,173,.5);
+                box-shadow: 0 0 12px rgba(0,0,.72);
+            }
+        }
+    }
+
+    &__stripe{
+        tr:nth-child(even){
+            background-color: rgba(136, 137, 139, 0.306);
+        }
+        tr:hover{
+            cursor: pointer;
+            background-color: rgba(163,166,173,.5);
+            box-shadow: 0 0 12px rgba(0,0,.72);
+            
+        }
     }
 }
 

@@ -6,10 +6,11 @@ import { Header } from './header'
 import { Body } from './body'
 
 export default defineComponent((props: TableProps, { slots }) => {
-  const { c } = useClassnames('table')
+  const { c, ce } = useClassnames('table')
 
   return () => {
-    const { columns, data } = props
+    const { columns, data, stripe } = props
+    console.log(stripe)
     const children = filterEmpty(slots.default?.() || [])
     const myColumns: any[] = columns ?? []
     if (myColumns?.length < 1) { // 如果没有columns，就获取slots中的jin-table-column 获取jin-table-column 中的 key和title
@@ -25,12 +26,13 @@ export default defineComponent((props: TableProps, { slots }) => {
 
     const cls = {
       [c()]: true,
+      [c(ce('stripe'))]: stripe,
     }
 
     return (
       <table class={cls}>
         <Header columns={myColumns} v-slots={slots} />
-        <Body columns={myColumns} data={data} />
+        <Body columns={myColumns} data={data} stripe={stripe} />
       </table>
     )
   }
