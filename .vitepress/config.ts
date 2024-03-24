@@ -26,6 +26,7 @@ export default defineConfig({
             { text: 'Input输入框', link: '/components/input/' },
             { text: 'Tooltip提示', link: '/components/tooltip/' },
             { text: 'Table表格', link: '/components/table/' },
+            { text: 'Infinite Scroll 无限滚动', link: '/components/virtual-list/' },
           ],
         },
       ],
