@@ -4,6 +4,7 @@
     ".vitepress/**/*.ts",
     ".vitepress/**/*.vue",
     ".vitepress/**/*.json",
-    ".vitepress/**/*.tsx"
+    ".vitepress/**/*.tsx",
+    ".vitepress/**/demos/*.vue"
   ]
 }

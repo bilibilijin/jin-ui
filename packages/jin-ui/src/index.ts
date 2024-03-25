@@ -14,6 +14,7 @@ export default {
         app.use(comp as any)
     })
   },
+
   version: pkg.version,
 } as Plugin
 

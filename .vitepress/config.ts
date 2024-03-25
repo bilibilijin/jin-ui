@@ -27,6 +27,7 @@ export default defineConfig({
             { text: 'Tooltip提示', link: '/components/tooltip/' },
             { text: 'Table表格', link: '/components/table/' },
             { text: 'Infinite Scroll 无限滚动', link: '/components/virtual-list/' },
+            { text: 'Notification通知', link: '/components/notification/' },
           ],
         },
       ],

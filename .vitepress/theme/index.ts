@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import { AntdTheme } from 'vite-plugin-vitepress-demo/theme'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import jin from 'jin-ui'
 import 'jin-ui/styles.ts'
 
@@ -18,5 +19,7 @@ export default {
     // ...
     app.component('Demo', AntdTheme)
     app.use(jin)
+    for (const [key, component] of Object.entries(ElementPlusIconsVue))
+      app.component(key, component)
   },
 } satisfies Theme
