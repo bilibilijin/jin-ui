@@ -1,7 +1,7 @@
 {
   "name": "bilibili-jin-ui",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is a vue3 component library",
   "author": "jinzi <544378003@qq.com>",
   "license": "MIT",
@@ -20,7 +20,6 @@
     "./dist/*": "./dist/*",
     "./lib/*": "./lib/*",
     "./package.json": "./package.json"
-
   },
   "main": "es/index.js",
   "types": "es/index.d.ts",
