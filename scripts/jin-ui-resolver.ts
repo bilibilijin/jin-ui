@@ -4,8 +4,6 @@ export function jinUIResolver(): ComponentResolver {
   return {
     type: 'component',
     resolve(name) {
-      console.log(name)
-      console.log(name.slice(3))
       if (name.startsWith('Jin')) {
         return {
           name: name.slice(3),
