@@ -5,7 +5,7 @@ import type { Placement } from '@floating-ui/vue'
 import { offset, useFloating } from '@floating-ui/vue'
 
 import { filterEmpty, isBaseType } from '@v-c/utils'
-import { useClassnames } from '@jin-ui/utils'
+import { useClassnames } from '@blibli-jin-ui/utils'
 
 export default defineComponent({
   name: 'JinTooltip',

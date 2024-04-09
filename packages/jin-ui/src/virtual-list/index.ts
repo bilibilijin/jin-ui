@@ -1,10 +1,10 @@
 import type { App } from 'vue'
 
-import VirtualList from './virtual-list'
+import InfiniteScroll from './virtual-list'
 
 // 组件
-VirtualList.install = (app: App) => {
-  app.component(VirtualList.name, VirtualList)
+InfiniteScroll.install = (app: App) => {
+  app.component(InfiniteScroll.name, InfiniteScroll)
 }
 
-export default VirtualList
+export default InfiniteScroll

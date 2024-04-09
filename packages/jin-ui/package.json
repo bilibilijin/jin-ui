@@ -1,15 +1,41 @@
 {
-  "name": "tov-ui",
+  "name": "bliblijin-ui",
+  "type": "module",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "main": "index.js",
+  "description": "this is a vue3 component library",
+  "author": "jinzi <544378003@qq.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue3",
+    "vue",
+    "component"
+  ],
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./es/*": "./es/*",
+    "./dist/*": "./dist/*",
+    "./lib/*": "./lib/*",
+    "./package.json": "./package.json"
+
+  },
+  "main": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build",
+    "build:umd": "vite build --config vite.umd.config.ts",
+    "build:style": "vite build --config vite.style.config.ts"
   },
   "dependencies": {
+    "@bilibili-jin-ui/utils": "workspace:*",
     "@floating-ui/vue": "^1.0.6",
     "@v-c/utils": "^0.0.26",
     "lodash-es": "^4.17.21"

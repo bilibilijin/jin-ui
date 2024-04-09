@@ -8,3 +8,4 @@ import { TableColumn } from './table-column'
 }
 
 export default Table
+export { TableColumn }

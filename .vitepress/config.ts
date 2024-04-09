@@ -8,6 +8,7 @@ export default defineConfig({
     'docs/(.*)': '(.*)',
     'packages/jin-ui/src/:comp/(.*)': 'components/:comp/(.*)',
     'packages/utils/src/(.*)': 'utils/(.*)',
+    'packages/icons/docs/(.*)': 'icons/(.*)',
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -15,6 +16,7 @@ export default defineConfig({
       { text: '指南', link: '/introduction/' },
       { text: '组件', link: '/components/' },
       { text: '工具', link: '/utils/' },
+      { text: '图标', link: '/icons/' },
     ],
 
     sidebar: {
@@ -44,6 +46,12 @@ export default defineConfig({
         {
           text: 'genClass',
           link: '/utils/gen-class',
+        },
+      ],
+      '/icons/': [
+        {
+          text: '基础',
+          link: '/icons/',
         },
       ],
 

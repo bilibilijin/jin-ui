@@ -10,7 +10,7 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "paths": {
-      "@jin-ui/utils": [
+      "@blibli-jin-ui/utils": [
         "packages/utils/src"
       ],
       "jin-ui": [
@@ -18,9 +18,16 @@
       ],
       "jin-ui/*": [
         "packages/jin-ui/src/*"
+      ],
+      "@blibli-jin-ui/icons": [
+        "packages/icons/src"
       ]
     },
+
     "resolveJsonModule": true,
+    "types": [
+      "vitest/globals"
+    ],
     "allowImportingTsExtensions": true,
 
     /* Linting */

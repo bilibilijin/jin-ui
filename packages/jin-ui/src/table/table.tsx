@@ -1,6 +1,6 @@
 import { defineComponent, isVNode } from 'vue'
 import { filterEmpty, isBaseType } from '@v-c/utils'
-import { useClassnames } from '@jin-ui/utils'
+import { useClassnames } from '@blibli-jin-ui/utils'
 import type { TableProps } from './interface'
 import { Header } from './header'
 import { Body } from './body'

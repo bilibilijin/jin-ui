@@ -1,5 +1,5 @@
 import { TransitionGroup, defineComponent, onMounted, ref } from 'vue'
-import { useClassnames } from '@jin-ui/utils'
+import { useClassnames } from '@blibli-jin-ui/utils'
 import { Close } from '@element-plus/icons-vue'
 import type { NotificationConfig, NotificationConfigType, NotificationInstance } from './interface'
 export default defineComponent<{
