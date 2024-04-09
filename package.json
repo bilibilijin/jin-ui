@@ -37,6 +37,7 @@
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.37",
     "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-icons": "^0.18.5",
     "unplugin-vue-components": "^0.26.0",
