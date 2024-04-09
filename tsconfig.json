@@ -10,7 +10,7 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "paths": {
-      "@blibli-jin-ui/utils": [
+      "@bilibili-jin-ui/utils": [
         "packages/utils/src"
       ],
       "jin-ui": [
@@ -19,7 +19,7 @@
       "jin-ui/*": [
         "packages/jin-ui/src/*"
       ],
-      "@blibli-jin-ui/icons": [
+      "@bilibili-jin-ui/icons": [
         "packages/icons/src"
       ]
     },

@@ -113,6 +113,9 @@ importers:
 
   packages/jin-ui:
     dependencies:
+      '@bilibili-jin-ui/utils':
+        specifier: workspace:*
+        version: link:../utils
       '@floating-ui/vue':
         specifier: ^1.0.6
         version: 1.0.6(vue@3.4.21)

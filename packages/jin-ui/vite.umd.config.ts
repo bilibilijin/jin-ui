@@ -16,7 +16,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: /^@blibli-jin-ui\/utils/,
+        find: /^@bilibili-jin-ui\/utils/,
         replacement: path.resolve(baseUrl, '../utils/src'),
       },
     ],

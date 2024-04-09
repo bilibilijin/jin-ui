@@ -22,8 +22,8 @@ export default defineConfig({
         '@v-c/utils',
         'lodash-es',
         'vue',
-        '@blibli-jin-ui/utils',
-        '@blibli-jin-ui/icons',
+        '@bilibili-jin-ui/utils',
+        '@bilibili-jin-ui/icons',
       ],
       output: [
         {

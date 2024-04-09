@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import { useClassnames } from '@blibli-jin-ui/utils'
+import { useClassnames } from '@bilibili-jin-ui/utils'
 import type { HeaderProps } from './interface'
 
 export const Header = defineComponent<HeaderProps>({

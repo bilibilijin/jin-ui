@@ -2,7 +2,7 @@
 <script lang='ts'>
 import type { PropType } from 'vue'
 import { defineComponent } from 'vue'
-import { useClassnames } from '@blibli-jin-ui/utils'
+import { useClassnames } from '@bilibili-jin-ui/utils'
 
 export default defineComponent({
   name: 'JinButton',

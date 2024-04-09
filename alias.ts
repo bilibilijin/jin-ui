@@ -10,11 +10,11 @@ export default [
     replacement: path.resolve(baseUrl, 'packages/jin-ui/src'),
   },
   {
-    find: /^@blibli-jin-ui\/utils/,
+    find: /^@bilibili-jin-ui\/utils/,
     replacement: path.resolve(baseUrl, 'packages/utils/src'),
   },
   {
-    find: /^@blibli-jin-ui\/icons/,
+    find: /^@bilibili-jin-ui\/icons/,
     replacement: path.resolve(baseUrl, 'packages/icons/src'),
   },
 ]

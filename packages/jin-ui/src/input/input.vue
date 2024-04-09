@@ -1,7 +1,7 @@
 <!--  -->
 <script setup lang='ts'>
 import { nextTick, onMounted, ref } from 'vue'
-import { useClassnames } from '@blibli-jin-ui/utils'
+import { useClassnames } from '@bilibili-jin-ui/utils'
 import { omit, pick } from 'lodash-es'
 import { type InputProps, originInputProps } from './interface'
 

@@ -8,7 +8,7 @@ title: 图标
 
 <!--  -->
 <script setup lang='ts'>
-import { Loading } from '@blibli-jin-ui/icons'
+import { Loading } from '@bilibili-jin-ui/icons'
 </script>
 
 <template>
